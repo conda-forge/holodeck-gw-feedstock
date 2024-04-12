@@ -1,5 +1,5 @@
 {% set name = "holodeck-gw" %}
-{% set version = "1.0" %}
+{% set version = "1.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/holodeck-gw-{{ version }}.tar.gz
-  sha256: 6a20222953caaf22a98488a0de60a9cc74f97cc4ef912450ece4c5d02ff6a135
+  sha256: bdffc3772361d6e7930b9de75e9b7233c83f309a6a2fc4cbd7770f9b08b08c62
 
 build:
   skip: true  # [py<38 or win]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
